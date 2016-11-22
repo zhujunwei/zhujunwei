@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="js/jquery-2.2.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<style>
+			html,body{
+				width:100%;
+				height:100%;
+				margin:0;
+				padding:0;
+			}
+			canvas{
+				width:100%;
+				height:100%;
+			}
+		</style>
+		<script type="text/javascript">
+			$(function(){
+				var myCanvas = document.getElementById("myCanvas");
+				var ctx = myCanvas.getContext('2d');
+				var image = new Image();
+				image.src = "http://static.coolcto.com/@/20160924/23322028129.JPG02766284-a14f-422a-a8be-348bdf975187.jpg";
+				image.onload = function(){
+					ctx.drawImage(image,0,0,125,135);
+				}
+			})
+		</script>
+		<title></title>
+	</head>
+	<body>
+		<canvas id="myCanvas">
+			
+		</canvas>
+	</body>
+</html>

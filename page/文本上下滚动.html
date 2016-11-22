@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title>jQuery文字无缝滚动效果代码 - 16素材网</title>
+<link type="text/css" href="css/scrollText.css" rel="stylesheet" />
+<script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
+<script type="text/javascript" src="js/scrollText.js"></script>
+<script type="text/javascript">
+//$(document).ready(function(){
+//	
+//})
+$(function(){
+	$('.list_lh li:even').addClass('lieven');
+	var timer = null;
+	var tempScroll = 0;
+	var liHeight = 68;
+	function scrolling(){
+		timer = setInterval(function(){
+			if(tempScroll>liHeight){
+				tempScroll = 0;
+				clearInterval(timer);
+				$('ul').find('li').slice(0,1).appendTo($('ul'));
+				$('ul').css({
+					"webkitTransform":"translateY(0)"
+				});
+				scrolling();
+			}
+			$('ul').css({
+				"webkitTransform":"translateY(-"+ (tempScroll++) +"px)"
+			});
+		},30)
+	}
+	scrolling();
+	
+	$('.list_lh').bind('touchstart',function(event){
+		event.preventDefault();
+		clearInterval(timer);
+	})
+	$('.list_lh').bind('touchend',function(event){
+		event.preventDefault();
+		scrolling();
+	})
+})
+</script>
+</head>
+
+<body>
+<div class="box">
+	<div class="bcon">
+		<!-- 代码开始 -->
+		<div class="list_lh">
+			<ul>
+				<li>
+					<p><a href="http://www.16sucai.com/" target="_blank">1000000</a><a href="http://www.16sucai.com/" target="_blank" class="btn_lh">领号</a><em>获得</em></p>
+					<p><a href="http://www.16sucai.com/" target="_blank" class="a_blue">网游战江湖公测豪华礼包</a><span>17:28:05</span></p>
+				</li>
+				<li>
+					<p><a href="http://www.16sucai.com/" target="_blank">2000000</a><a href="http://www.16sucai.com/" target="_blank" class="btn_lh">领号</a><em>获得</em></p>
+					<p><a href="http://www.16sucai.com/" target="_blank" class="a_blue">网游战江湖公测豪华礼包</a><span>17:28:05</span></p>
+				</li>
+				<li>
+					<p><a href="http://www.16sucai.com/" target="_blank">3000000</a><a href="http://www.16sucai.com/" target="_blank" class="btn_lh">领号</a><em>获得</em></p>
+					<p><a href="http://www.16sucai.com/" target="_blank" class="a_blue">网游战江湖公测豪华礼包</a><span>17:28:05</span></p>
+				</li>
+				<li>
+					<p><a href="http://www.16sucai.com/" target="_blank">4000000</a><a href="http://www.16sucai.com/" target="_blank" class="btn_lh">领号</a><em>获得</em></p>
+					<p><a href="http://www.16sucai.com/" target="_blank" class="a_blue">网游战江湖公测豪华礼包</a><span>17:28:05</span></p>
+				</li>
+				<li>
+					<p><a href="http://www.16sucai.com/" target="_blank">5000000</a><a href="http://www.16sucai.com/" target="_blank" class="btn_lh">领号</a><em>获得</em></p>
+					<p><a href="http://www.16sucai.com/" target="_blank" class="a_blue">网游战江湖公测豪华礼包</a><span>17:28:05</span></p>
+				</li>
+				<li>
+					<p><a href="http://www.16sucai.com/" target="_blank">6000000</a><a href="http://www.16sucai.com/" target="_blank" class="btn_lh">领号</a><em>获得</em></p>
+					<p><a href="http://www.16sucai.com/" target="_blank" class="a_blue">网游战江湖公测豪华礼包</a><span>17:28:05</span></p>
+				</li>
+				<li>
+					<p><a href="http://www.16sucai.com/" target="_blank">7000000</a><a href="http://www.16sucai.com/" target="_blank" class="btn_lh">领号</a><em>获得</em></p>
+					<p><a href="http://www.16sucai.com/" target="_blank" class="a_blue">网游战江湖公测豪华礼包</a><span>17:28:05</span></p>
+				</li>
+				<li>
+					<p><a href="http://www.16sucai.com/" target="_blank">8000000</a><a href="http://www.16sucai.com/" target="_blank" class="btn_lh">领号</a><em>获得</em></p>
+					<p><a href="http://www.16sucai.com/" target="_blank" class="a_blue">网游战江湖公测豪华礼包</a><span>17:28:05</span></p>
+				</li>
+				<li>
+					<p><a href="http://www.16sucai.com/" target="_blank">9000000</a><a href="http://www.16sucai.com/" target="_blank" class="btn_lh">领号</a><em>获得</em></p>
+					<p><a href="http://www.16sucai.com/" target="_blank" class="a_blue">网游战江湖公测豪华礼包</a><span>17:28:05</span></p>
+				</li>
+				<li>
+					<p><a href="http://www.16sucai.com/" target="_blank">1000000</a><a href="http://www.16sucai.com/" target="_blank" class="btn_lh">领号</a><em>获得</em></p>
+					<p><a href="http://www.16sucai.com/" target="_blank" class="a_blue">网游战江湖公测豪华礼包</a><span>17:28:05</span></p>
+				</li>
+				<li>
+					<p><a href="http://www.16sucai.com/" target="_blank">1100000</a><a href="http://www.16sucai.com/" target="_blank" class="btn_lh">领号</a><em>获得</em></p>
+					<p><a href="http://www.16sucai.com/" target="_blank" class="a_blue">网游战江湖公测豪华礼包</a><span>17:28:05</span></p>
+				</li>
+				<li>
+					<p><a href="http://www.16sucai.com/" target="_blank">1200000</a><a href="http://www.16sucai.com/" target="_blank" class="btn_lh">领号</a><em>获得</em></p>
+					<p><a href="http://www.16sucai.com/" target="_blank" class="a_blue">网游战江湖公测豪华礼包</a><span>17:28:05</span></p>
+				</li>
+			</ul>
+		</div>
+		<!-- 代码结束 -->
+	</div>
+
+</div>
+
+</body>
+</html>
